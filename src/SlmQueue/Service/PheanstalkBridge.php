@@ -110,7 +110,7 @@ class PheanstalkBridge implements
     public function getJobManager()
     {
         if (!$this->manager instanceof JobManager) {
-            $this->manager = new JobManager();
+            $this->manager = $this->getServiceLocator()->get('SlmQueue\Job\JobManager');
         }
         return $this->manager;
     }

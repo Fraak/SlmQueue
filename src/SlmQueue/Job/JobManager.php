@@ -7,9 +7,14 @@ use Zend\ServiceManager\AbstractPluginManager;
 class JobManager extends AbstractPluginManager
 {
     /**
-     * @var bool
+     * {@inheritDoc}
      */
     protected $shareByDefault = false;
+
+    /**
+     * {@inheritDoc}
+     */
+    protected $autoAddInvokableClass = false;
 
     /**
      * @param  mixed $plugin
